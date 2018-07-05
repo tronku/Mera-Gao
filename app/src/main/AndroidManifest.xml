@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tronku.mera_gao">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/village"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Splash">
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".panchayat"
+            android:label="@string/panchayat_activities"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".website"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+
+        <activity
+            android:name=".land_agri"
+            android:label="@string/land_agriculture"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".work_labour"
+            android:label="@string/work_labour"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".others"
+            android:label="@string/other_details"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".app_credits"></activity>
+    </application>
+
+</manifest>

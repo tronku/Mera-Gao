@@ -19,12 +19,13 @@ public class land_agri extends AppCompatActivity {
         maps = findViewById(R.id.maps);
         info = findViewById(R.id.land_info);
 
+        final Intent intent = new Intent(land_agri.this, website.class);
+        intent.putExtra("back", "land_agri");
+
         agri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(land_agri.this, website.class);
                 intent.putExtra("website","http://upagriculture.com/Default.aspx");
-                intent.putExtra("back", "land_agri");
                 startActivity(intent);
             }
         });
@@ -32,9 +33,7 @@ public class land_agri extends AppCompatActivity {
         cases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(land_agri.this, website.class);
                 intent.putExtra("website","http://vaad.up.nic.in/");
-                intent.putExtra("back", "land_agri");
                 startActivity(intent);
             }
         });
@@ -42,9 +41,7 @@ public class land_agri extends AppCompatActivity {
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(land_agri.this, website.class);
                 intent.putExtra("website","http://upbhunaksha.gov.in/09/index.html");
-                intent.putExtra("back", "land_agri");
                 startActivity(intent);
             }
         });
@@ -52,9 +49,7 @@ public class land_agri extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(land_agri.this, website.class);
                 intent.putExtra("website","http://upbhulekh.gov.in/public/public_ror/Public_ROR.jsp");
-                intent.putExtra("back", "land_agri");
                 startActivity(intent);
             }
         });

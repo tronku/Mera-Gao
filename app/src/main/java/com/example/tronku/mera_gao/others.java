@@ -25,12 +25,13 @@ public class others extends AppCompatActivity {
         food = findViewById(R.id.food_civil);
         monitor = findViewById(R.id.monitor_fund);
 
+        final Intent intent = new Intent(others.this, website.class);
+        intent.putExtra("back", "others");
+
         online.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(others.this, website.class);
                 intent.putExtra("website","http://164.100.181.16/mcitizen/login/login.aspx");
-                intent.putExtra("back", "others");
                 startActivity(intent);
             }
         });
@@ -38,9 +39,7 @@ public class others extends AppCompatActivity {
         district.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(others.this, website.class);
                 intent.putExtra("website","http://edistrict.up.nic.in/");
-                intent.putExtra("back", "others");
                 startActivity(intent);
             }
         });
@@ -48,9 +47,7 @@ public class others extends AppCompatActivity {
         transport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(others.this, website.class);
                 intent.putExtra("website","http://parivahan.gov.in/");
-                intent.putExtra("back", "others");
                 startActivity(intent);
             }
         });
@@ -58,9 +55,7 @@ public class others extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(others.this, website.class);
                 intent.putExtra("website","http://fcs.up.nic.in/");
-                intent.putExtra("back", "others");
                 startActivity(intent);
             }
         });
@@ -68,8 +63,7 @@ public class others extends AppCompatActivity {
         monitor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://pfms.nic.in/Static/KnowYourPayment.aspx"));
+                intent.putExtra("website", "https://pfms.nic.in/Static/KnowYourPayment.aspx");
                 startActivity(intent);
             }
         });

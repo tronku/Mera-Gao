@@ -20,12 +20,13 @@ public class work_labour extends AppCompatActivity {
         nrega = findViewById(R.id.mgnrega);
         housing = findViewById(R.id.housing);
 
+        final Intent intent = new Intent(work_labour.this, website.class);
+        intent.putExtra("back", "work_labour");
+
         water.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(work_labour.this, website.class);
                 intent.putExtra("website", "http://indiawater.gov.in/");
-                intent.putExtra("back", "work_labour");
                 startActivity(intent);
             }
         });
@@ -33,9 +34,7 @@ public class work_labour extends AppCompatActivity {
         clean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(work_labour.this, website.class);
                 intent.putExtra("website", "http://swachhbharatmission.gov.in/sbmcms/index.htm");
-                intent.putExtra("back", "work_labour");
                 startActivity(intent);
             }
         });
@@ -43,9 +42,7 @@ public class work_labour extends AppCompatActivity {
         nrega.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(work_labour.this, website.class);
                 intent.putExtra("website", "http://nrega.nic.in/netnrega/home.aspx");
-                intent.putExtra("back", "work_labour");
                 startActivity(intent);
             }
         });
@@ -53,8 +50,7 @@ public class work_labour extends AppCompatActivity {
         housing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.iay.nic.in/"));
+                intent.putExtra("website", "https://www.iay.nic.in/");
                 startActivity(intent);
             }
         });

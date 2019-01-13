@@ -24,12 +24,13 @@ public class panchayat extends AppCompatActivity {
         pension = findViewById(R.id.pensions);
         fund = findViewById(R.id.funds);
 
+        final Intent intent = new Intent(panchayat.this, website.class);
+        intent.putExtra("back", "panchayat");
+
         plannings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(panchayat.this, website.class);
                 intent.putExtra("website", "http://www.planningonline.gov.in/");
-                intent.putExtra("back", "panchayat");
                 startActivity(intent);
             }
         });
@@ -37,9 +38,7 @@ public class panchayat extends AppCompatActivity {
         reports.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(panchayat.this, website.class);
                 intent.putExtra("website", "http://www.reportingonline.gov.in/");
-                intent.putExtra("back", "panchayat");
                 startActivity(intent);
             }
         });
@@ -55,8 +54,7 @@ public class panchayat extends AppCompatActivity {
         fund.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://accountingonline.gov.in/"));
+                intent.putExtra("website", "https://accountingonline.gov.in/");
                 startActivity(intent);
             }
         });

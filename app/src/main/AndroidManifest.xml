@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Splash">
-        <activity android:name=".splash">
+        <activity android:name=".splash"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,11 +22,13 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".panchayat"
             android:label="@string/panchayat_activities"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".website"
             android:theme="@style/AppTheme" />
@@ -37,16 +40,20 @@
         <activity
             android:name=".land_agri"
             android:label="@string/land_agriculture"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".work_labour"
             android:label="@string/work_labour"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".others"
             android:label="@string/other_details"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".app_credits"></activity>
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"/>
+        <activity android:name=".app_credits"
+            android:launchMode="singleTop"></activity>
     </application>
 
 </manifest>
